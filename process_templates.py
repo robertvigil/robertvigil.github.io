@@ -44,11 +44,11 @@ def process_directory():
     # Get the current working directory
     current_dir = Path.cwd()
     
-    # Find all .tmpl files recursively
-    template_files = list(current_dir.rglob("*.tmpl"))
+    # Find all .tmpl.html files recursively
+    template_files = list(current_dir.rglob("*.tmpl.html"))
     
     if not template_files:
-        print("No .tmpl files found in the directory structure.", file=sys.stderr)
+        print("No .tmpl.html files found in the directory structure.", file=sys.stderr)
         return
     
     print(f"Found {len(template_files)} template files to process.")
@@ -57,8 +57,9 @@ def process_directory():
     for template_file in template_files:
         print(f"Processing {template_file}")
         
-        # Generate output filename (change extension from .tmpl to .html)
-        output_file = template_file.with_suffix('.html')
+        # Generate output filename (remove .tmpl from the filename)
+        # This handles the .tmpl.html extension specifically
+        output_file = template_file.parent / (template_file.name.replace('.tmpl.html', '.html'))
         
         # Process the template
         processed_content = process_includes(template_file)
