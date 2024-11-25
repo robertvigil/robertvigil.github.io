@@ -1,9 +1,0 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway');
-
-html { background-color: darkgray; } /* one way of reducing page reload flash */
-
-body { font-family: 'Raleway', serif; font-size: 15px; } /* font-size: 15px; */
-body { margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; }
-
-a { text-decoration: none; color: black; }
-a:hover { color: gray; }
