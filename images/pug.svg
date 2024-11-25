@@ -1,8 +1,8 @@
 <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
   <!-- Headphones -->
-  <path d="M10 25 C10 15 40 15 40 25" stroke="black" stroke-width="2" fill="none"/>
-  <rect x="8" y="23" width="4" height="8" fill="black"/>
-  <rect x="38" y="23" width="4" height="8" fill="black"/>
+  <path d="M5 25 C5 12 45 12 45 25" stroke="black" stroke-width="3" fill="none"/>
+  <rect x="3" y="23" width="6" height="12" rx="2" fill="black"/>
+  <rect x="41" y="23" width="6" height="12" rx="2" fill="black"/>
   
   <!-- Pug Face - Base -->
   <circle cx="25" cy="28" r="15" fill="#E0C4A8"/>
