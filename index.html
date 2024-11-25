@@ -16,8 +16,8 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
-
 <body>
+
 <div>
 <img src="images/pug.svg" style="vertical-align: middle;"> 
 <span style="color: #fafaD2; font-size: xx-large; font-style: bold; vertical-align: middle;">robertvigil.github.io</span><br>
@@ -25,25 +25,23 @@ tech (and other) ramblings.. often for my own future reference, or to clarify th
 <a href="blog/blog-page.html">Blog</a> :: <a href="blog/blog-page.html">Test 1</a> :: <a href="blog/blog-page.html">Test 2</a>
 </div>
 
-<p>
-<pre><code class="language-python"># this is a python script!
+<p><pre><code class="language-python">
+# this is a python script!
 name = "Robert"
 print(f"Hello from {name}!")
-</code></pre>
-</p>
+</code></pre></p>
 
-<p>
-<pre><code class="language-python"># this is a python script!
+<p><pre><code class="language-python">
+# this is a python script!
 a = 10
 b = 20
 c = a + b
 msg = "more python!!"
 print(f"Hello from {msg}!")
-</code></pre>
-</p>
+</code></pre></p>
 
-<p>
-<pre><code class="language-bash"># this cli output
+<p><pre><code class="language-bash">
+# this cli output
 robert@server2:/media/sf_dropbox/code/_production/robertvigil.github.io$ tree
 .
 ├── blog
@@ -53,21 +51,39 @@ robert@server2:/media/sf_dropbox/code/_production/robertvigil.github.io$ tree
 │   └── pug.svg
 └── index.html
 
-3 directories, 4 files</code></pre></p>
+3 directories, 4 files
+</code></pre></p>
+
+<p><pre><code class="language-javascript"></code>
+// Declaration
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+
+// Expression; the class is anonymous but assigned to a variable
+const Rectangle = class {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+};
+
+// Expression; the class has its own name
+const Rectangle = class Rectangle2 {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+};
+</code></pre></p>
 
 <p>
 When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$    
 </p>
 
-<iframe
-id="robertvigil.com-rides"
-title="robertvigil.com/rides"
-width="100%"
-height="400"
-src="https://robertvigil.com/rides">
-</iframe>
-
 </body>
-
 </html>
