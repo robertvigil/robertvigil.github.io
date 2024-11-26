@@ -1,3 +1,4 @@
-admin/
+_admin/
+_partials/
 **/*.tmpl.html
-partials/
+**/*.ps
