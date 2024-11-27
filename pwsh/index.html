@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>robertvigil.github.io</title>
+<link rel="shortcut icon" type="image/jpg" href='/_images/favicon.ico'/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+<link rel="stylesheet" href="/_scripts/googlecode.min.css">
+<script src="/_scripts/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<div>
+<img src="/_images/pug.svg" style="vertical-align: middle;"> 
+<span style="color: #fafaD2; font-size: xx-large; font-style: bold; vertical-align: middle;">robertvigil.github.io</span><br>
+<span style="font-size: small; vertical-align: top;">tech (and other) notes.. often for my own reference</span><br>
+<a href="/">home</a> :: 
+<a href="/pwsh">pwsh</a> :: 
+<a href="/pyxl">pyxl</a> :: 
+<a href="/math">math</a> :: 
+<a href="https://robertvigil.com" target="_blank">robertvigil.com</a>
+</div>
+
+<pre><code class="language-powershell"># powershell "one-liner" for finding files on windows machines
+$path = 'c:\some\folder\path'
+
+Get-ChildItem -Path $path -Recurse -ErrorAction SilentlyContinue | # suppress error msg's about inaccessible files
+Where-Object { 
+    $_.PSIsContainer -eq $False -and # ignore folders
+    ($_.FullName -like '*like_this*' -and $_.Name -notlike '*not_like_this*') # file name match
+} |
+Select-Object -Property FullName, LastWriteTime | # narrow down to full file name and modified date/time
+Sort-Object -Property LastWriteTime -Descending | # sort by date/time desc
+ConvertTo-Csv -NoTypeInformation # convert to text so ps doesn't truncate results
+#Out-File -FilePath .\files.csv # optionally output to csv</code></pre>
+    
+</body>
+
+</html>

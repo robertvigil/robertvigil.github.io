@@ -1,0 +1,6 @@
+_admin/
+_partials/
+**/*.jinja.html
+**/*.ps1
+**/*.sh
+justfile
